@@ -8,9 +8,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="shortcut icon" href="img/bone/img1.png" type="image/x-icon">
+    <link rel="manifest" href="manifest.json">
 </head>
-<body>
-    
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./sw.js')
+      .then(() => console.log('PWA: Service Worker Registrado!'))
+      .catch(err => console.log('PWA: Erro no registro', err));
+  }
+</script>
+<body>    
     <header>
         <nav>
             <div class="header-social">
@@ -33,6 +42,13 @@
                 <li><a href="#home">HOME</a></li>
                 <li><a href="#produtos">COLEÇÕES</a></li>
                 <li><a href="#contato">CONTATO</a></li>
+                <li class="nav-install">
+                    <a href="#contato">
+                        <svg class="install-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 15L16 11M12 15L8 11M12 15V3M20 15V17C20 19.2091 18.2091 21 16 21H8C5.79086 21 4 19.2091 4 17V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -467,6 +483,54 @@
             const modal = document.getElementById('productModal');
             if (event.target == modal) closeModal();
         }
+
+
+        let deferredPrompt;
+        const installContainer = document.getElementById('install-container');
+        const btnInstall = document.getElementById('btn-install');
+
+        window.addEventListener('beforeinstallprompt', (e) => {
+            // Impede que o Chrome mostre o banner automático
+            e.preventDefault();
+            // Guarda o evento para ser disparado depois
+            deferredPrompt = e;
+            
+            // Mostra o item da lista no menu
+            if (installContainer) {
+                installContainer.style.display = 'inline-flex'; 
+            }
+        });
+
+        btnInstall.addEventListener('click', async (e) => {
+            // Previne que o link tente navegar para algum lugar
+            e.preventDefault();
+
+            if (!deferredPrompt) return;
+
+            // Mostra o prompt de instalação
+            deferredPrompt.prompt();
+
+            // Espera a escolha do usuário
+            const { outcome } = await deferredPrompt.userChoice;
+            console.log(`Usuário escolheu: ${outcome}`);
+
+            // Limpa o prompt (só pode ser usado uma vez)
+            deferredPrompt = null;
+
+            // Esconde o botão após a escolha
+            if (installContainer) {
+                installContainer.style.display = 'none';
+            }
+        });
+
+        // Detecta se o app já foi instalado para esconder o botão
+        window.addEventListener('appinstalled', () => {
+            console.log('App instalado com sucesso!');
+            deferredPrompt = null;
+            if (installContainer) {
+                installContainer.style.display = 'none';
+            }
+        }); 
     </script>
 
     <a href="https://wa.me/5511999999999" class="whatsapp-float" target="_blank">
