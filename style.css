@@ -13,67 +13,70 @@
 }
 
 
-
-/* Estilo para o item da lista que contém o botão */
+/* Container do item na lista */
 .nav-install {
-    display: inline-flex;
+    display: inline-flex !important; /* Forçando a exibição para teste */
     align-items: center;
-    margin-left: 15px; /* Espaço entre o menu e o botão */
+    margin-left: 12px;
 }
 
-.nav-install a {
-    /* Cores e Bordas */
+.btn-glow-install {
     display: flex;
     align-items: center;
-    gap: 8px;
-    padding: 6px 12px;
-    border: 1px solid var(--primary);
-    border-radius: 4px;
-    background: rgba(255, 0, 127, 0.05); /* Fundo rosa bem sutil */
-    
-    /* Tipografia */
-    color: #fff !important; /* Força o branco mesmo se o menu for cinza */
-    font-family: 'Orbitron', sans-serif;
-    font-size: 11px;
-    font-weight: 900;
-    text-decoration: none;
-    letter-spacing: 1px;
-    
-    /* Efeitos */
+    justify-content: center;
+    height: 32px; 
+    width: 32px; /* Botão quadrado para o ícone */
+    padding: 1.5px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    border-radius: 50%; /* Deixa o ícone em um círculo neon */
+    border: none;
+    cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 0 10px rgba(255, 0, 127, 0.3);
-    white-space: nowrap;
 }
 
-/* Ícone dentro do link */
-.nav-install .install-icon {
-    width: 14px;
-    height: 14px;
-    stroke: var(--secondary);
-    transition: 0.3s;
+.btn-inner {
+    background: #000;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
 }
 
-/* Hover: Inversão de cores */
-.nav-install a:hover {
+.install-icon {
+    width: 18px; 
+    height: 18px;
+    /* Força a cor do contorno para o azul secundário */
+    stroke: var(--secondary); 
+    display: block !important;
+    filter: drop-shadow(0 0 3px var(--secondary));
+}
+
+/* Brilho pulsante */
+@keyframes pulse-neon {
+    0%, 100% { box-shadow: 0 0 5px var(--primary); }
+    50% { box-shadow: 0 0 15px var(--primary); }
+}
+
+.btn-glow-install {
+    animation: pulse-neon 2s infinite ease-in-out;
+}
+
+/* Hover */
+.btn-glow-install:hover {
+    transform: scale(1.1);
+}
+.btn-glow-install:hover .btn-inner {
     background: var(--primary);
-    color: #000 !important;
-    box-shadow: 0 0 20px var(--primary);
-    transform: translateY(-2px);
 }
-
-.nav-install a:hover .install-icon {
+.btn-glow-install:hover .install-icon {
     stroke: #000;
 }
 
-/* Animação de pulso apenas na borda para não mover o menu */
-@keyframes border-glow {
-    0%, 100% { border-color: var(--primary); box-shadow: 0 0 8px var(--primary); }
-    50% { border-color: var(--secondary); box-shadow: 0 0 15px var(--secondary); }
-}
 
-.nav-install a {
-    animation: border-glow 3s infinite ease-in-out;
-}
+
+
 
 
 
