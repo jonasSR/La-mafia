@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Máfia Online Shop | Premium Streetwear</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <div class="header-social">
+                <a href="https://www.instagram.com/la_mafiaonlineshop/" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+                </a>
+                <a href="https://wa.me/55SEUNUMERO" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+                </a>
+            </div>
+
+            <div class="logo-container">
+                <img src="img/logo/logo1.jpg" alt="Logo La Máfia" class="nav-logo">
+                <span>LA MÁFIA</span>
+            </div>
+
+            <div class="header-spacer"></div>
+
+            <ul>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#produtos">COLEÇÕES</a></li>
+                <li><a href="#contato">CONTATO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section id="home" class="hero">
+        <div class="hero-shapes"></div>
+        <div class="cyber-grid"></div>
+        <div class="scanline"></div>
+        
+        <div class="hero-content">
+            <img src="img/logo/logo1.jpg" alt="La Máfia Online Shop" class="floating-logo">
+            <h1>DOMINE AS RUAS</h1>
+            <p>O melhor do street & esportivo premium. Do tamanho 02 ao 16.</p>
+            <a href="#produtos" class="btn-glow">VER LANÇAMENTOS</a>
+        </div>
+    </section>
+
+    <section id="produtos" class="products">
+        <h2 class="section-title">DROPS EXCLUSIVOS</h2>
+        <div class="product-grid">
+            
+            <div class="product-card">
+                <div class="product-img-container swiper mySwiper">
+                    <span class="tag">PREMIUM</span>
+                    <div class="swiper-wrapper" onclick="openModal('Tênis Street Max', 'R$ 299,90', 'img/tenis/img1.png', 'Edição Especial La Máfia: Amortecimento neon de alta performance, material respirável e design futurista exclusivo.')">
+                        
+                        <div class="swiper-slide">
+                            <img src="img/tenis/img1.png" class="main-img" alt="Tênis Street Max - Lateral">
+                        </div>
+                        
+                        <div class="swiper-slide">
+                            <img src="img/tenis/img2.png" class="main-img" alt="Tênis Street Max - Detalhes">
+                        </div>
+                        
+                        <div class="swiper-slide">
+                            <img src="img/tenis/img3.png" class="main-img" alt="Tênis Street Max - No pé">
+                        </div>
+
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                
+            <h3>Tênis Street Max</h3>
+            <p class="price">R$ 299,90</p>
+            <button class="buy-button" onclick="openModal('Tênis Street Max', 'R$ 299,90', 'img/tenis/img1.png', 'Edição Especial La Máfia: Amortecimento neon de alta performance, material respirável e design futurista exclusivo.')">Ver Detalhes</button>
+        </div>
+
+            <div class="product-card">
+                <div class="product-img-container swiper mySwiper">
+                    <span class="tag">NOVIDADE</span>
+                    <div class="swiper-wrapper" onclick="openModal('Short Street Glow Feminino', 'R$ 129,90', 'img/short/img1.png', 'Short esportivo premium com detalhes em neon. Tecido Tactel Pro de secagem rápida, leve e com modelagem exclusiva La Máfia.')">
+                        
+                        <div class="swiper-slide">
+                            <img src="img/short/img1.png" class="main-img" alt="Short Street Feminino - Frente">
+                        </div>
+                        
+                        <div class="swiper-slide">
+                            <img src="img/short/img2.png" class="main-img" alt="Short Street Feminino - Costas">
+                        </div>
+                        
+                        <div class="swiper-slide">
+                            <img src="img/short/img3.png" class="main-img" alt="Short Street Feminino - Produto">
+                        </div>
+
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            
+            <h3>Short Street Glow</h3>
+            <p class="price">R$ 129,90</p>
+            <button class="buy-button" onclick="openModal('Short Street Glow Feminino', 'R$ 129,90', 'img/short/img1.png', 'Short esportivo premium com detalhes em neon. Tecido Tactel Pro de secagem rápida.')">Ver Detalhes</button>
+        </div>
+
+            <div class="product-card">
+                <div class="product-img-container swiper mySwiper">
+                    <span class="tag">INFANTIL</span>
+                    <div class="swiper-wrapper" onclick="openModal('Boné Snow White', 'R$ 89,90', 'img/bone/img1.png', 'Boné snapback premium branco com logo bordado. Ajuste perfeito e estilo street para o dia a dia.')">
+                        
+                        <div class="swiper-slide">
+                            <img src="img/bone/img1.png" class="main-img" alt="Boné Snow White - Frente">
+                        </div>
+                        
+                        <div class="swiper-slide">
+                            <img src="img/bone/img2.png" class="main-img" alt="Boné Snow White - Detalhe Costas">
+                        </div>
+                        
+                        <div class="swiper-slide">
+                            <img src="img/bone/img3.png" class="main-img" alt="Boné Snow White - Produto">
+                        </div>
+
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                
+                <h3>Boné Snow White</h3>
+                <p class="price">R$ 89,90</p>
+                <button class="buy-button" onclick="openModal('Boné Snow White', 'R$ 89,90', 'img/bone/img1.png', 'Boné snapback premium branco com logo bordado.')">Ver Detalhes</button>
+            </div>
+        </div>
+    </section>
+
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modal-body">
+                <div class="modal-img-area">
+                    <div class="swiper modalSwiper">
+                        <div class="swiper-wrapper" id="modalSwiperWrapper">
+                            </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+                <div class="modal-info-area">
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalPrice" class="modal-price"></p>
+
+                    <div class="stock-container">
+                        <div class="stock-label">Estoque quase esgotado!</div>
+                        <div class="stock-bar-bg">
+                            <div class="stock-bar-fill" style="width: 85%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="product-offer-timer">
+                        <span class="timer-icon">⏳</span>
+                        <span class="timer-text">RESERVA GARANTIDA POR:</span>
+                        <span id="productTimer">15:00</span>
+                    </div>
+
+                    <div class="size-box">
+                        <label>Selecione o Tamanho:</label>
+                        <div class="sizes" id="sizeSelector">
+                            <button onclick="selectSize(this)">02</button>
+                            <button onclick="selectSize(this)">04</button>
+                            <button onclick="selectSize(this)">06</button>
+                            <button onclick="selectSize(this)">08</button>
+                            <button onclick="selectSize(this)">10</button>
+                            <button onclick="selectSize(this)">12</button>
+                            <button onclick="selectSize(this)">14</button>
+                            <button onclick="selectSize(this)">16</button>
+                        </div>
+                    </div>
+
+                    <p id="modalDesc" class="modal-description"></p>
+
+                    <div class="upsell-box">
+                        <span>🔥 LEVE JUNTO:</span>
+                        <p>Boné Snow White por apenas <strong>+ R$ 89,90</strong></p>
+                    </div>
+
+                    <a href="#" id="whatsappLink" target="_blank" class="whatsapp-btn">COMPRAR NO WHATSAPP</a>
+
+                    <div class="trust-badges">
+                        <div><span>🛡️</span> Compra 100% Segura</div>
+                        <div><span>🔄</span> 1ª Troca Grátis</div>
+                        <div><span>💎</span> Garantia La Máfia</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="faq">
+        <h2 class="section-title">DÚVIDAS FREQUENTES</h2>
+        <div class="faq-container">
+            <details>
+                <summary>Qual o prazo de entrega?</summary>
+                <p>O prazo médio é de 3 a 7 dias úteis, dependendo da sua região.</p>
+            </details>
+            <details>
+                <summary>Como escolho o tamanho ideal?</summary>
+                <p>Nossa modelagem é padrão. Recomendamos comprar o tamanho que a criança já costuma usar.</p>
+            </details>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <h2 class="section-title">QUEM USA, RECOMENDA</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <p>"Qualidade absurda! O tênis chegou em 4 dias aqui em SP. Virei fã."</p>
+                <span>- Ricardo M. ⭐⭐⭐⭐⭐</span>
+            </div>
+            <div class="testimonial-card">
+                <p>"O short tem um caimento perfeito. Minha filha amou!"</p>
+                <span>- Juliana S. ⭐⭐⭐⭐⭐</span>
+            </div>
+        </div>
+    </section>
+
+    <footer class="lp-footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <img src="img/logo/logo1.jpg" alt="La Máfia" class="footer-logo">
+                <p>Streetwear Premium do tamanho 02 ao 16.</p>
+            </div>
+
+            <div class="footer-social">
+                <h4>SIGA A MÁFIA</h4>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/la_mafiaonlineshop/" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+                    </a>
+                    <a href="https://wa.me/55SEU_NUMERO_AQUI" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-badges">
+                <h4>PAGAMENTO SEGURO</h4>
+                <div class="payment-icons">
+                    <img src="https://img.icons8.com/color/48/visa.png" alt="Visa">
+                    <img src="https://img.icons8.com/color/48/mastercard.png" alt="Mastercard">
+                    <img src="https://img.icons8.com/color/48/pix.png" alt="Pix">
+                    <img src="https://img.icons8.com/color/48/barcode.png" alt="Boleto">
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-legal">
+            <p>&copy; 2026 La Máfia Online Shop | Todos os direitos reservados</p>
+            <p class="small-text">Enviamos para todo o Brasil com código de rastreio 📦</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- VARIÁVEIS GLOBAIS ---
+        let selectedSize = "";
+        let countdown; // Controle do cronômetro do produto
+
+        // --- LÓGICA DE SELEÇÃO DE TAMANHO ---
+        function selectSize(btn) {
+            document.querySelectorAll('.sizes button').forEach(b => b.classList.remove('selected'));
+            btn.classList.add('selected');
+            selectedSize = btn.innerText;
+            updateWhatsAppLink();
+        }
+
+        // --- LINK DINÂMICO DO WHATSAPP ---
+        function updateWhatsAppLink() {
+            const productName = document.getElementById('modalTitle').innerText;
+            const sizeTxt = selectedSize ? ` no tamanho ${selectedSize}` : "";
+            const msg = window.encodeURIComponent(`Olá! Quero dominar as ruas com o ${productName}${sizeTxt}. Está disponível?`);
+            // SUBSTITUA PELO SEU NÚMERO REAL ABAIXO
+            document.getElementById('whatsappLink').href = `https://wa.me/5511999999999?text=${msg}`;
+        }
+
+        // --- CRONÔMETRO INTERNO DO PRODUTO (NO MODAL) ---
+        function startProductTimer(duration) {
+            let timer = duration, minutes, seconds;
+            const display = document.querySelector('#productTimer');
+            
+            clearInterval(countdown); // Limpa timer anterior
+
+            countdown = setInterval(function () {
+                minutes = parseInt(timer / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                if (display) display.textContent = minutes + ":" + seconds;
+
+                if (--timer < 0) {
+                    clearInterval(countdown);
+                    if (display) {
+                        display.textContent = "EXPIRADO";
+                        display.style.color = "#ff4d4d";
+                    }
+                }
+            }, 1000);
+        }
+
+
+        function openModal(name, price, img, desc) {
+            // 1. Preenche as informações básicas
+            document.getElementById('modalTitle').innerText = name;
+            document.getElementById('modalPrice').innerText = price;
+            document.getElementById('modalImg').src = img;
+
+            // 2. Gera o gatilho de escassez (Estoque Fake entre 3 e 7)
+            const estoqueFake = Math.floor(Math.random() * (7 - 3 + 1)) + 3;
+            
+            // 3. Insere a descrição + o aviso de urgência
+            // Usamos innerHTML para que o navegador entenda as tags <br> e <strong>
+            document.getElementById('modalDesc').innerHTML = desc + 
+            `<br><br><strong style="color: #ff4d4d;">🔥 Restam apenas ${estoqueFake} unidades deste tamanho em estoque!</strong>`;
+            
+            // 4. Configura o Link do WhatsApp com o seu número
+            // Lembre-se de trocar o 5511999999999 pelo seu número real
+            const msg = window.encodeURIComponent(`Olá! Gostaria de saber mais sobre o ${name} que vi no site.`);
+            document.getElementById('whatsappLink').href = `https://wa.me/5511999999999?text=${msg}`;
+            
+            // 5. Exibe o Modal
+            document.getElementById('productModal').style.display = "flex";
+        }
+
+        function closeModal() {
+            document.getElementById('productModal').style.display = "none";
+        }
+
+        // Fecha o modal se o usuário clicar fora da caixa branca
+        window.onclick = function(event) {
+            const modal = document.getElementById('productModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+
+        // --- FUNÇÃO ABRIR MODAL (REESCRITA) ---
+        let modalSwiperInstance; // Variável para controlar o swiper do modal
+
+        function openModal(name, price, img, desc) {
+            selectedSize = ""; 
+            document.querySelectorAll('.sizes button').forEach(b => b.classList.remove('selected'));
+            
+            document.getElementById('modalTitle').innerText = name;
+            document.getElementById('modalPrice').innerText = price;
+            
+            // --- LÓGICA DO CARROSSEL DE IMAGENS ---
+            const wrapper = document.getElementById('modalSwiperWrapper');
+            wrapper.innerHTML = ''; // Limpa fotos do produto anterior
+
+            // Busca o card do produto na página para "clonar" as imagens
+            const productCard = Array.from(document.querySelectorAll('.product-card')).find(card => 
+                card.querySelector('h3').innerText.trim() === name.trim()
+            );
+
+            if (productCard) {
+                const allImages = productCard.querySelectorAll('.main-img');
+                allImages.forEach(image => {
+                    wrapper.innerHTML += `<div class="swiper-slide"><img src="${image.src}" alt="${name}"></div>`;
+                });
+            } else {
+                // Fallback: se não achar o card, usa a imagem única padrão
+                wrapper.innerHTML = `<div class="swiper-slide"><img src="${img}" alt="${name}"></div>`;
+            }
+
+            // Gatilho de Escassez (Estoque)
+            const estoqueFake = Math.floor(Math.random() * (7 - 3 + 1)) + 3;
+            document.getElementById('modalDesc').innerHTML = desc + 
+            `<br><br><strong style="color: #ff4d4d;">🔥 Restam apenas ${estoqueFake} unidades!</strong>`;
+            
+            // Inicia o Timer de 15 minutos
+            startProductTimer(15 * 60); 
+            updateWhatsAppLink();
+            
+            // Exibe o Modal
+            document.getElementById('productModal').style.display = "flex";
+
+            // INICIALIZA O SWIPER (Com pequeno atraso para o navegador processar o HTML)
+            setTimeout(() => {
+                if (modalSwiperInstance) modalSwiperInstance.destroy(); // Limpa instância antiga
+                modalSwiperInstance = new Swiper(".modalSwiper", {
+                    loop: true,
+                    navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                    },
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true,
+                    },
+                });
+            }, 50);
+        }
+        // --- INICIALIZAÇÃO DO SWIPER ---
+        const swiper = new Swiper(".mySwiper", {
+            loop: true,
+            grabCursor: true,
+            effect: "creative",
+            creativeEffect: {
+                prev: { shadow: true, translate: [0, 0, -400] },
+                next: { translate: ["100%", 0, 0] },
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                dynamicBullets: true,
+            },
+        });
+
+        // --- NOTIFICAÇÕES DE VENDA (INTERVALO ALEATÓRIO) ---
+        function showSaleNotification() {
+            const names = ["Marcos", "Ana", "Felipe", "Carla", "João", "Ricardo", "Beatriz", "Vinícius"];
+            const cities = ["São Paulo", "Rio de Janeiro", "Curitiba", "Belo Horizonte", "Porto Alegre", "Salvador"];
+            
+            const randomName = names[Math.floor(Math.random() * names.length)];
+            const randomCity = cities[Math.floor(Math.random() * cities.length)];
+
+            const oldNote = document.querySelector('.sale-notification');
+            if (oldNote) oldNote.remove();
+
+            const notification = document.createElement('div');
+            notification.className = 'sale-notification';
+            notification.innerHTML = `<span><strong>${randomName}</strong> de ${randomCity} comprou agora</span>`;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => { notification.classList.add('show'); }, 100);
+            
+            setTimeout(() => { 
+                notification.classList.remove('show');
+                setTimeout(() => { notification.remove(); }, 600);
+            }, 4000);
+
+            // Próxima notificação entre 10 e 20 segundos
+            const nextTime = Math.floor(Math.random() * (20000 - 10000 + 1)) + 10000;
+            setTimeout(showSaleNotification, nextTime);
+        }
+
+        // Inicia primeira notificação
+        window.onload = function() {
+            setTimeout(showSaleNotification, 5000);
+        };
+
+        // Fechar modal ao clicar fora
+        window.onclick = function(event) {
+            const modal = document.getElementById('productModal');
+            if (event.target == modal) closeModal();
+        }
+    </script>
+
+    <a href="https://wa.me/5511999999999" class="whatsapp-float" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+    </a>
+</body>
+</html>
